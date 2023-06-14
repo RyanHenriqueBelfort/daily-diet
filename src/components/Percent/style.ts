@@ -1,5 +1,4 @@
 import  styled  from "styled-components/native";
-import { MaterialIcons } from '@expo/vector-icons'
 
 export type IconTypeStyleProps = 'PRIMARY' | 'SECONDARY';
 
@@ -13,17 +12,17 @@ export const PercentView = styled.View <Props>`
     margin-top: 32px;
     align-items: center;
     border-radius: 8px;
-    padding: 10px 8px 20px 8px;
+    padding: 5px 5px 20px 5px;
     background-color: ${({theme, color}) =>  color === 'PRIMARY'? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
 `
 
-export const IconView = styled.View`
+export const IconTouchableOpacity = styled.TouchableOpacity`
     align-self: flex-end;
 `
 
 export const TextPercent = styled.Text`
     font-weight: 700;
-    font-size: ${({theme}) => theme.FONT_SIZE.XL}px;
+    font-size: 32px;
     font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
 `
 

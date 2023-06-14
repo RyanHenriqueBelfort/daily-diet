@@ -18,28 +18,19 @@ export const Photo = styled.Image`
     width: 40px;
     height: 40px;
 `
-
-export const Percent = styled.View`
-    flex-direction: column;
-    padding: 20px 16px;
-    margin-top: 32px;
-
-    border-radius: 8px;
-    background-color: ${({theme}) => theme.COLORS.GREEN_LIGHT};
-    `
-
-export const TextPercent = styled.Text`
-    text-align: center;
-    font-weight: 700;
-    font-size: ${({theme}) => theme.FONT_SIZE.XL}px;
-    font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
+export const Meals = styled.View`
+    margin-top: 40px;
 `
-export const Text = styled.Text`
-    text-align: center;
-    font-family: ${({theme}) => theme.FONT_FAMILY.REGULAR};
+export const ButtonNewMeal = styled.TouchableOpacity`
+    flex-direction: row;
+    background-color: ${({theme}) => theme.COLORS.GRAY_600};
+    margin-top: 8px; 
+    padding: 16px 24px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
 `
 
-// export const Icon = styled(MaterialIcons).attrs<Props>(({theme, type }) => ({
-//     size: 24,
-//     color: type === 'PRIMARY' ? theme.COLORS.GREEN_700 : theme.COLORS.RED
-// }))``;
+export const DayList = styled.View`
+    padding-top: 32px;
+`
