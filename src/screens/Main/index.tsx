@@ -20,7 +20,7 @@ export function Main() {
                 <Image source={logo}/>
                 <Photo source={photo}/>
             </Header>
-            <Percent color="PRIMARY"/>
+            <Percent color="PRIMARY" button="show" text="80.69%" description="das refeições dentro da dieta" width="DEFAULT"/>
             <Meals>
                 <Text style={{fontFamily: theme.FONT_FAMILY.REGULAR, fontSize: theme.FONT_SIZE.MD }}>Refeições</Text>
                 <ButtonNewMeal>

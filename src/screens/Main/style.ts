@@ -11,6 +11,7 @@ export const Header = styled.View`
    flex-direction: row;
    justify-content: space-between;
    margin-top: 30px;
+   margin-bottom: 32px;
 `
 
 export const Photo = styled.Image`

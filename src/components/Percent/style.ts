@@ -1,19 +1,20 @@
 import  styled  from "styled-components/native";
 
-export type IconTypeStyleProps = 'PRIMARY' | 'SECONDARY';
+export type IconTypeStyleProps = 'PRIMARY' | 'SECONDARY' | 'DEFAULT';
+export type widthStyle = 'FULL' | 'DEFAULT';
 
 type Props = {
     color: IconTypeStyleProps
+    width: widthStyle
 }
-
 
 export const PercentView = styled.View <Props>`
     flex-direction: column;
-    margin-top: 32px;
     align-items: center;
     border-radius: 8px;
     padding: 5px 5px 20px 5px;
-    background-color: ${({theme, color}) =>  color === 'PRIMARY'? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
+    background-color: ${({theme, color}) =>  color === 'PRIMARY' && theme.COLORS.GREEN_LIGHT || color === 'SECONDARY' && theme.COLORS.RED_LIGHT || color === 'DEFAULT' && theme.COLORS.GRAY_200};
+    width: ${({width}) => width === 'FULL' ? '100%' : 'auto'};
 `
 
 export const IconTouchableOpacity = styled.TouchableOpacity`
@@ -29,7 +30,3 @@ export const TextPercent = styled.Text`
 export const SubTextPercent = styled.Text`
     font-family: ${({theme}) => theme.FONT_FAMILY.REGULAR};
 `
-
-// export const Icon = styled(MaterialIcons).attrs<Props>(({theme, color}) => ({
-//     size: 24,
-// }))``;
