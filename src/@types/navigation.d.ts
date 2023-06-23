@@ -2,7 +2,8 @@ export declare global {
     namespace ReactNavigation {
         interface RootParamList {
             Main: undefined;
-            Statistics: undefined
+            Statistics: undefined;
+            NewMeal: undefined;
         }
     }
 }

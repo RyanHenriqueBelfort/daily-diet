@@ -1,4 +1,6 @@
 import { View, Image, Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import { Container, Photo, Header, Meals, ButtonNewMeal, DayList } from "./style";
 import Icon from 'react-native-vector-icons/Feather' 
 
@@ -12,8 +14,12 @@ import { Meal } from "../../components/Meal";
 
 
 export function Main() {
+    const navigation = useNavigation()
 
-    console.log(formatDate())
+    const handleNewMeal = () => {
+        navigation.navigate('NewMeal')
+    } 
+
     return (
         <Container>
             <Header>
@@ -23,7 +29,7 @@ export function Main() {
             <Percent color="PRIMARY" button="show" text="80.69%" description="das refeições dentro da dieta" width="DEFAULT"/>
             <Meals>
                 <Text style={{fontFamily: theme.FONT_FAMILY.REGULAR, fontSize: theme.FONT_SIZE.MD }}>Refeições</Text>
-                <ButtonNewMeal>
+                <ButtonNewMeal onPress={handleNewMeal}>
                     <Icon name="plus" color={theme.COLORS.WHITE} size={theme.FONT_SIZE.XL} style={{paddingRight: 12}}/>
                     <Text style={{fontFamily: theme.FONT_FAMILY.BOLD, fontSize: theme.FONT_SIZE.MD, color: theme.COLORS.WHITE}}>Nova Refeição</Text>
                 </ButtonNewMeal>

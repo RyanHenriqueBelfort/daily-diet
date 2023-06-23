@@ -16,7 +16,7 @@ export default {
       GRAY_400: '#B9BBBC',
       GRAY_300: '#DDDEDF',
       GRAY_200: '#EFF0F0',
-      GRAY_100: '#EFF0F0'
+      GRAY_100: '#EFF0F0',
     },
     FONT_FAMILY: {
       REGULAR: 'Nunito_400Regular',
