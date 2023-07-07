@@ -33,7 +33,9 @@ export const Main = styled.View`
 `;
 
 export const Form = styled.View`
-  
+  /* border: 1px solid red; */
+  height: 100%;
+
 `
 
 export const TextLabel = styled.Text`
@@ -54,4 +56,23 @@ export const InsideTheDiet = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 160px;
+`
+
+export const Option = styled.TouchableOpacity`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: ${({theme}) => theme.COLORS.GRAY_200};
+    border-radius: 8px;
+    width: 160px;
+`
+export const Status = styled.View`
+    margin-right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: ${({theme}) =>  theme.COLORS.GREEN_DARK};
 `

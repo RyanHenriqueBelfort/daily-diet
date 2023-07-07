@@ -3,13 +3,14 @@ import theme from '../../theme'
 
 export type colorStyleStatus = 'PRIMARY' | 'SECONDARY';
 export type colorBackgroundColor = 'PRIMARY' | 'SECONDARY' | 'DEFAULT' ;
+export type Pressed = 'TRUE' | 'FALSE'; 
 
 
 type Props = {
     color?: colorStyleStatus
     colorBackgroundColor?: colorBackgroundColor
+    pressed?: Pressed
 }
-
 
 export const Main = styled.TouchableOpacity <Props>`
     display: flex;
