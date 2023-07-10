@@ -23,6 +23,7 @@ import { Input } from "../../components/Input";
 // import { Option } from "../../components/Option";
 import { colorBackgroundColor } from "../../components/Option/style";
 import { Button } from "../../components/Button";
+import { PropsRouter } from "../../routes/app.routes";
 
 export function NewMeal() {
   const [background, setBackground] = useState<colorBackgroundColor>();
@@ -32,7 +33,7 @@ export function NewMeal() {
 
   const dateRef = useRef<TextInputMaskProps>();
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<PropsRouter>();
 
   function handleBack() {
     navigation.navigate("Main");
@@ -66,7 +67,7 @@ export function NewMeal() {
               borderRadius: 6,
               padding: 10,
               height: 120,
-              textAlignVertical: "top", // Alinha o texto no começo
+              textAlignVertical: "top", 
             }}
           />
           <DateTime>

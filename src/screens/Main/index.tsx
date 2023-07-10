@@ -35,13 +35,13 @@ export function Main() {
                 </ButtonNewMeal>
                 <DayList>
                     <Text style={{fontFamily: theme.FONT_FAMILY.BOLD, fontSize: theme.FONT_SIZE.LG}}>{formatDate()}</Text>
-                    <Meal hour="20:00" name="X-tudo" stutus="SECONDARY"/>
-                    <Meal  hour="22:00" name="Maçã" stutus="PRIMARY"/>
+                    <Meal hour="23:00" name="X-tudo" status="SECONDARY"/>
+                    <Meal  hour="22:00" name="Maçã" status="PRIMARY"/>
                 </DayList>
                 <DayList>
                     <Text style={{fontFamily: theme.FONT_FAMILY.BOLD, fontSize: theme.FONT_SIZE.LG}}>{formatDate()}</Text>
-                    <Meal hour="20:00" name="X-tudo" stutus="SECONDARY"/>
-                    <Meal  hour="22:00" name="Maçã" stutus="PRIMARY"/>
+                    <Meal hour="20:00" name="X-tudo" status="SECONDARY"/>
+                    <Meal  hour="22:00" name="Maçã" status="PRIMARY"/>
                 </DayList>
 
             </Meals>
