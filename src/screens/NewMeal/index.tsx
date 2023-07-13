@@ -134,7 +134,7 @@ export function NewMeal() {
               <Text style={{ fontFamily: theme.FONT_FAMILY.BOLD }}>Não</Text>
             </Option>
           </InsideTheDiet>
-          <Button/>
+          <Button name="Cadastrar refeição" navigate="Fedback" key={1}/>
         </Form>
       </Main>
     </Container>

@@ -12,4 +12,9 @@ export const Text = styled.Text`
     font-size: 24px;
     color: ${({theme}) => theme.COLORS.GREEN_DARK};
     font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
+    margin-bottom: 8px;
+`
+
+export const Image = styled.Image`
+    margin-bottom: 32px;
 `
