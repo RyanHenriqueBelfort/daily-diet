@@ -4,7 +4,7 @@ import {MaterialIcons} from '@expo/vector-icons'
 
 export const Container = styled(SafeAreaView)`
     flex: 1;
-    padding: 24px;
+    padding: 0 24px 0 24px;
 
 `
 export const Header = styled.View`
@@ -33,5 +33,6 @@ export const ButtonNewMeal = styled.TouchableOpacity`
 `
 
 export const DayList = styled.View`
-    padding-top: 32px;
+    padding-top: 12px;
+    height: 400px;
 `

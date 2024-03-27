@@ -12,7 +12,7 @@ export const PercentView = styled.View <Props>`
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
-    padding: 5px 5px 20px 5px;
+    padding: 5px 8px 20px 8px;
     background-color: ${({theme, color}) =>  color === 'PRIMARY' && theme.COLORS.GREEN_LIGHT || color === 'SECONDARY' && theme.COLORS.RED_LIGHT || color === 'DEFAULT' && theme.COLORS.GRAY_200};
     width: ${({width}) => width === 'FULL' ? '100%' : 'auto'};
 `

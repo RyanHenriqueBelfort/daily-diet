@@ -5,6 +5,7 @@ export declare global {
             Statistics: undefined;
             NewMeal: undefined;
             Feedback: undefined;
+            ViewMeal: undefined;
         }
     }
 }

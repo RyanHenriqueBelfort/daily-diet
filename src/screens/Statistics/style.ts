@@ -1,9 +1,15 @@
 import { SafeAreaView } from 'react-native-safe-area-context'
 import styled from 'styled-components/native'
 
-export const Container = styled(SafeAreaView)`
+export type IconTypeStyleProps = 'PRIMARY' | 'SECONDARY' ;
+
+type Props = {
+  color: IconTypeStyleProps
+}
+
+export const Container = styled(SafeAreaView) <Props>`
   flex: 1;
-  background-color: ${({theme}) => theme.COLORS.GREEN_LIGHT};
+  background-color: ${({color ,theme}) => color === "PRIMARY" ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
 `
 export const Header = styled.View`
   padding: 24px;

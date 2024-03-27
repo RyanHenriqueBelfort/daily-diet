@@ -14,6 +14,9 @@ export const Text = styled.Text`
     font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
     margin-bottom: 8px;
 `
+export const Ilustration = styled.View`
+    margin-top: 40px;
+`
 
 export const Image = styled.Image`
     margin-bottom: 32px;

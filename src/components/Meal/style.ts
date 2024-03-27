@@ -6,7 +6,7 @@ type Props = {
     color: colorStyleStatus
 }
 
-export const Content = styled.View`
+export const Content = styled.TouchableOpacity`
     flex-direction:  row;
     justify-content: space-between;
     border: 1px solid ${({theme}) => theme.COLORS.GRAY_400};

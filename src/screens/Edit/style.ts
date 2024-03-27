@@ -76,15 +76,3 @@ export const Status = styled.View`
     border-radius: 100px;
     background-color: ${({theme}) =>  theme.COLORS.GREEN_DARK};
 `
-export const Button = styled.TouchableOpacity`
-    padding: 16px 24px; 
-    border-radius: 6px;
-    background-color: ${({theme}) => theme.COLORS.GRAY_600};
-`
-
-export const TextCenterButton = styled.Text`
-    font-size: 14px;
-    font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
-    text-align: center;
-    color: ${({theme}) => theme.COLORS.GRAY_100 };
-`
