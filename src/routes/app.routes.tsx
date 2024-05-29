@@ -19,7 +19,7 @@ type Routes = {
     onDiet: boolean;
   };
   ViewMeal: { name: string, date: string, description: string, hour: string, status: boolean, id: number};
-  Edit: undefined;
+  Edit: { id: number};
 };
 
 export type PropsRouter = NativeStackNavigationProp<Routes>;

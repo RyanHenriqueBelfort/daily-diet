@@ -1,4 +1,4 @@
-import { Alert, Text, TouchableOpacity, View } from "react-native";
+import {Text, TouchableOpacity, View } from "react-native";
 import {
   ButtonModal,
   Container,
@@ -22,7 +22,6 @@ import Modal from "react-native-modal";
 
 import Icon from "react-native-vector-icons/Feather";
 import {
-  useFocusEffect,
   useNavigation,
   useRoute,
 } from "@react-navigation/native";
@@ -31,8 +30,7 @@ import { PropsRouter } from "../../routes/app.routes";
 
 import theme from "../../theme";
 import { Button } from "../../components/Button";
-import { useCallback, useEffect, useState } from "react";
-import { mealsGetAll } from "../../Storage/Meal/mealsGetAll";
+import { useState } from "react";
 import { MealsStorageDTO } from "../../Storage/Meal/mealsStorageDTO";
 import { formatDate } from "../../util/FormatDate";
 import { mealDelete } from "../../Storage/Meal/mealDelete";
@@ -46,6 +44,10 @@ type RouteParams = {
   id: number;
 };
 
+type EditMealParametro = {
+  id: number;
+}
+
 export function ViewMeal() {
   const [meals, setMeals] = useState<MealsStorageDTO[]>([]);
   const [modal, setModal] = useState(false);
@@ -53,8 +55,7 @@ export function ViewMeal() {
   const navigation = useNavigation<PropsRouter>();
 
   const route = useRoute();
-  const { date, description, hour, name, status, id } =
-    route.params as RouteParams;
+  const { date, description, hour, name, status, id } = route.params as RouteParams;
 
   function handleBack() {
     navigation.navigate("Main");
@@ -69,6 +70,11 @@ export function ViewMeal() {
     setModal(!modal);
     navigation.navigate("Main");
   }
+
+
+  const handleEditMeal = (meal: EditMealParametro) => {
+    navigation.navigate("Edit", {id});
+  };
 
   return (
     <>
@@ -133,9 +139,9 @@ export function ViewMeal() {
           <ContentButtons>
             <Button
               name="Editar refeição"
-              navigate="Edit"
               buttonWhiteMode="FALSE"
               icon="edit"
+              onPress={handleEditMeal}
             />
             <Button
               name="Excluir refeição"

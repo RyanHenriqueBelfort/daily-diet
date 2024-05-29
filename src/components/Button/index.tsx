@@ -7,7 +7,6 @@ import { PropsRouter } from '../../routes/app.routes';
 import Icon from "react-native-vector-icons/Feather";
 
 import { buttonWhite } from './styte'
-import { Text} from "react-native";
 
 interface ButtonProps {
     onPress?: Dispatch<React.SetStateAction<boolean>>

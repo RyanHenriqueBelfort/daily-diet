@@ -1,5 +1,5 @@
 import { useCallback, useState, useEffect, createContext } from "react";
-import { Alert, Text, TouchableOpacity, View } from "react-native";
+import { Alert, Text, TouchableOpacity } from "react-native";
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 
 import Icon from "react-native-vector-icons/Feather";
@@ -9,7 +9,6 @@ import theme from "../../theme";
 import { Container, StatisticsGeneral, Header, Teste } from "./style";
 import { Percent } from "../../components/Percent";
 import { mealsGetAll } from "../../Storage/Meal/mealsGetAll";
-import { get } from "react-native/Libraries/TurboModule/TurboModuleRegistry";
 
 export const ModeContext = createContext({});
 
@@ -57,7 +56,7 @@ export function Statistics() {
   function getMealsWithinTheDiet(params: boolean) {
     const meal = meals
       .filter((item) => item.status === params)
-      .length.toString(); // Pega todas as refeições com status TRUE
+      .length.toString();
     if (params) return setAllMealsWithininTheDiet(meal);
     setAllMealsOffinTheDiet(meal);
   }

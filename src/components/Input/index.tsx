@@ -1,5 +1,4 @@
 import { TextInputProps, TextInput } from "react-native";
-import { useTheme } from "styled-components/native";
 
 import { Container } from "./style";
 

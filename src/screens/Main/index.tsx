@@ -31,7 +31,7 @@ type ViewMealParametro = {
   hour: string;
   date: string;
   status: boolean;
-  id: number;
+  id: string;
 }
 
 export function Main() {
@@ -39,7 +39,6 @@ export function Main() {
   const [allMeals, setAllMeals] = useState("");
   const [mealsInDietStatic, setMealsInDietStatic] = useState("");
   const [allMealsWithininTheDiet, setAllMealsWithininTheDiet] = useState("");
-  
   // const { statics } = useContext(StaticsContext)
 
   function getMealsWithinTheDiet(params: boolean) {

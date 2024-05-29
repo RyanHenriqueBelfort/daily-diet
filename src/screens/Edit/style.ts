@@ -21,6 +21,22 @@ export const TextCenter = styled.Text`
   font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
 `;
 
+export const ContentViewModal = styled.View`
+  padding-top: 40px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 21px;
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme.COLORS.WHITE};
+`;
+export const TextModal = styled.Text`
+  text-align: center;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+  margin-bottom: 32px;
+`;
 export const Main = styled.View`
   padding-left: 24px;
   padding-right: 24px;
@@ -33,7 +49,7 @@ export const Main = styled.View`
 `;
 
 export const Form = styled.View`
-  /* border: 1px solid red; */
+ 
   height: 100%;
 
 `

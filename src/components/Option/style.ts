@@ -1,5 +1,4 @@
 import styled from 'styled-components/native'
-import theme from '../../theme'
 
 export type colorStyleStatus = 'PRIMARY' | 'SECONDARY';
 export type colorBackgroundColor = 'PRIMARY' | 'SECONDARY' | 'DEFAULT' ;

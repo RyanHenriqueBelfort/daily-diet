@@ -1,14 +1,15 @@
 export function formatDate(date: string, withBar = false) {
-    const parsedDate = new Date(date);
-    const year = parsedDate.getFullYear();
-    const month = (parsedDate.getMonth() + 1).toString().padStart(2, '0');
-    const day = parsedDate.getDate().toString().padStart(2, '0');
-
+    // Dividir a string de data em ano, mês e dia
+    const [year, month, day] = date.split('-');
+    
+    // Garantir que o dia e o mês tenham dois dígitos
+    const formattedDay = day.padStart(2, '0');
+    const formattedMonth = month.padStart(2, '0');
+    
+    // Formatar a data de acordo com o parâmetro withBar
     if (withBar) {
-        const formattedDate = `${day}/${month}/${year.toString()}`;
-        return formattedDate
+        return `${formattedDay}/${formattedMonth}/${year}`;
+    } else {
+        return `${formattedDay}.${formattedMonth}.${year.slice(-2)}`;
     }
-
-    const formattedDate = `${day}.${month}.${year.toString().slice(-2)}`;
-    return formattedDate;
 }

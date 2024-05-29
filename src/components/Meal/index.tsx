@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Text, View, TouchableOpacityProps } from "react-native";
+import { Text, TouchableOpacityProps } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { Content, HourText, Divider, Status, colorStyleStatus } from "./style";

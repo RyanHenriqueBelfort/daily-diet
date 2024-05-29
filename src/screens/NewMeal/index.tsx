@@ -1,12 +1,10 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { Text, TouchableOpacity, TextInput, View, Alert } from "react-native";
 
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 
 import Icon from "react-native-vector-icons/Feather";
-import { TextInputMask, TextInputMaskProps } from "react-native-masked-text";
-
-import Toast, { BaseToast } from "react-native-toast-message";
+import { TextInputMask } from "react-native-masked-text";
 
 import {
   Header,
@@ -56,28 +54,6 @@ export function NewMeal() {
     }, [])
   );
 
-  const toastConfig = {
-    success: (props) => (
-      <BaseToast
-        {...props}
-        style={{
-          borderLeftColor: theme.COLORS.GREEN_DARK,
-          backgroundColor: theme.COLORS.GREEN_LIGHT,
-          marginTop: 35,
-        }}
-        contentContainerStyle={{ paddingHorizontal: 15 }}
-        text1Style={{
-          fontSize: 15,
-          fontWeight: "600",
-        }}
-        text2Style={{
-          fontSize: 12,
-          fontWeight: "400",
-          color: "#000",
-        }}
-      />
-    ),
-  };
 
   function handleBack() {
     navigation.navigate("Main");
@@ -239,7 +215,6 @@ export function NewMeal() {
           </Form>
         </Main>
       </Container>
-      <Toast config={toastConfig} />
     </>
   );
 }

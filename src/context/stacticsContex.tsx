@@ -19,21 +19,14 @@ export const StaticsProvider = ({ children }: any) => {
       const data = await mealsGetAll();
       setMeals(data);
     } catch (error) {
-      // Tratar erro, se necessário
     }
   };
 
-  
-  // useEffect(() => {
-  //   getAllMeals();
-  //   getMealsWithinTheDiet(true);
-  //   getMealsStatics(parseInt(allMeals), parseInt(allMealsWithininTheDiet));
-  // });
-  
+
   function getMealsWithinTheDiet(params: boolean) {
     const meal = meals
     .filter((item) => item.status === params)
-    .length.toString(); // Pega todas as refeições com status TRUE
+    .length.toString();
     if (params) return setAllMealsWithininTheDiet(meal);
   }
   

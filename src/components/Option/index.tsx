@@ -1,5 +1,5 @@
 import { useState,   } from 'react'
-import { View, Text } from "react-native";
+import {  Text } from "react-native";
 import { Main, colorStyleStatus, Status, colorBackgroundColor, Pressed } from "./style";
 
 type MealProps = {
